@@ -6,6 +6,8 @@ services:
       - "8200:8200"
     cap_add:
       - IPC_LOCK
+    environment:
+      VAULT_ADDR: "http://127.0.0.1:8200"
     volumes:
       - ./config:/vault/config
       - vault_data:/vault/file

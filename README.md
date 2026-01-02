@@ -47,6 +47,14 @@ vault-secrets-manager/
 docker compose up -d
 ```
 
+## To unseal key
+```bash
+
+docker exec -e VAULT_ADDR=http://127.0.0.1:8200 -it vault vault operator init -key-shares=5 -key-threshold=3
+
+```
+
+
 ### Open UI
 
 ```
@@ -82,5 +90,4 @@ GitHub: [https://github.com/Nahin-CDR](https://github.com/Nahin-CDR)
 
 
 ---
-
 
